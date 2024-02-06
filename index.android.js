@@ -421,7 +421,7 @@ class RNGoogleFit {
               el.value = KgToLbs(el.value) //convert back to pounds
             }
             el.startDate = moment.parseZone(el.startDate).toISOString(true)
-            el.endDate = moment.parseZone(el.startDate).toISOString(true)
+            el.endDate = moment.parseZone(el.end).toISOString(true)
             return el
           }
         })
