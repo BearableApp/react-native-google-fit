@@ -492,15 +492,16 @@ declare module 'react-native-google-fit' {
   }
 
   export type WorkoutSample = {
-    startDate: string
-    endDate: string
-    activityType: ActivityType
-    sessionName: string
-    identifier: string
-    description?: string
-    calories?: number
-    steps?: number
-    intensity?: number
+    startDate: string,
+    endDate: string,
+    activityType: ActivityType,
+    sessionName: string,
+    identifier: string,
+    description?: string,
+    calories?: number,
+    steps?: number,
+    intensity?: number,
+    distance?: number,
   }
 
   export type Granularity = {
