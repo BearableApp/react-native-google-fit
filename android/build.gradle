@@ -70,13 +70,15 @@ repositories {
 }
 
 dependencies {
-    def androidXVersion = safeExtGet('androidXVersion', "1.+")
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation('com.facebook.react:react-native:+') {
         exclude group: 'com.android.support'
     }
        
+
+    def androidXVersion = safeExtGet('androidXVersion', null)
+    def defaultAndroidXVersion = "1.+"
     implementation "androidx.appcompat:appcompat:${safeExtGet(androidXVersion, defaultAndroidXVersion)}"
 
     implementation "com.google.android.gms:play-services-auth:${safeExtGet('authVersion', '+')}"
